@@ -2,12 +2,13 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
-const SecondScreen = ({navigation}) => {
+const SecondScreen = ({route, navigation}) => {
+    const {detailsss} = route.params
   return (
-    <View>
-        <TouchableOpacity onPress={() => navigation.goBack()}> 
+    <View style={{marginTop:30}}>
+        <TouchableOpacity onPress={() => navigation.navigate("FormScreen")}> 
 
-      <Text>Go Back</Text>
+      <Text>GO TO Form Screen</Text>
         </TouchableOpacity>
     </View>
   )
